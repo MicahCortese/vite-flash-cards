@@ -20,9 +20,27 @@ function Flashcards() {
 }
 
 function Progressbar() {
-  return;
+  return (
+    <div
+      style={{
+        textAlign: "left",
+        border: "2px solid black",
+        borderRadius: "12px",
+        marginBottom: "5px",
+        paddingLeft: "10px",
+      }}
+    >
+      <p>0%</p>
+    </div>
+  );
 }
 
 export default function App() {
-  return Flashcards();
+  return (
+    <>
+      <h1>Flash Cards</h1>
+      <Progressbar />
+      <Flashcards />
+    </>
+  );
 }
