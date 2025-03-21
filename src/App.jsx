@@ -7,14 +7,14 @@ function Flashcards() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        border: "2px solid black",
         borderRadius: "12px",
         height: "400px",
         width: "600px",
         backgroundColor: "grey",
+        margin: "5px"
       }}
     >
-      <p>This is the flash card content!</p>
+      <p>Card Content goes here!</p>
     </div>
   );
 }
@@ -24,7 +24,7 @@ function Progressbar() {
     <div
       style={{
         textAlign: "left",
-        border: "2px solid black",
+        border: "2px solid grey",
         borderRadius: "12px",
         marginBottom: "5px",
         paddingLeft: "10px",
@@ -35,12 +35,31 @@ function Progressbar() {
   );
 }
 
+function Toolbar() {
+  return (
+    <div style={{ display: "flex", justifyContent: "space-between", backgroundColor: "grey", borderRadius: "12px", margin: "5px"}}>
+      <div>
+        <button style={{background: "none"}}>{"<"} Previous</button>
+      </div>
+      <div>
+        <button style={{background: "none"}}>Show Answer</button>
+      </div>
+      <div>
+        <button style={{background: "none"}}>Next {">"}</button>
+      </div>
+    </div>
+  );
+}
+
 export default function App() {
   return (
     <>
       <h1>Flash Cards</h1>
       <Progressbar />
-      <Flashcards />
+      <div style={{border: "2px solid grey", borderRadius: "12px"}}>
+        <Flashcards />
+        <Toolbar />
+      </div>
     </>
   );
 }
