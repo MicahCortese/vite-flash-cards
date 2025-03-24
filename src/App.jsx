@@ -1,4 +1,5 @@
 import "./App.css";
+import data from "./flashcarddata.json";
 
 function Flashcards() {
   return (
@@ -14,7 +15,7 @@ function Flashcards() {
         margin: "5px"
       }}
     >
-      <p>Card Content goes here!</p>
+      <p>{data[0].question}</p>
     </div>
   );
 }
@@ -35,14 +36,18 @@ function Progressbar() {
   );
 }
 
-function Toolbar() {
+function Toolbar() { 
+  function showAnswer() {
+    alert(data[0].answer);
+  }
+
   return (
     <div style={{ display: "flex", justifyContent: "space-between", backgroundColor: "grey", borderRadius: "12px", margin: "5px"}}>
       <div>
         <button style={{background: "none"}}>{"<"} Previous</button>
       </div>
       <div>
-        <button style={{background: "none"}}>Show Answer</button>
+        <button style={{background: "none"}} onClick={showAnswer}>Show Answer</button>
       </div>
       <div>
         <button style={{background: "none"}}>Next {">"}</button>
