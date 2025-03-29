@@ -1,5 +1,6 @@
 import "./App.css";
 import data from "./flashcarddata.json";
+import { useState } from "react";
 
 function Flashcards() {
   return (
@@ -36,21 +37,19 @@ function Progressbar() {
   );
 }
 
-function Toolbar() { 
-  function showAnswer() {
-    alert(data[0].answer);
-  }
-
+function Toolbar() {
   return (
-    <div style={{ display: "flex", justifyContent: "space-between", backgroundColor: "grey", borderRadius: "12px", margin: "5px"}}>
-      <div>
-        <button style={{background: "none"}}>{"<"} Previous</button>
-      </div>
-      <div>
-        <button style={{background: "none"}} onClick={showAnswer}>Show Answer</button>
-      </div>
-      <div>
-        <button style={{background: "none"}}>Next {">"}</button>
+    <div>
+      <div style={{ display: "flex", justifyContent: "space-between", backgroundColor: "grey", borderRadius: "12px", margin: "5px"}}>
+        <div>
+          <button style={{background: "none"}}>{"<"} Previous</button>
+        </div>
+        <div>
+          <button style={{background: "none"}}>Show Answer</button>
+        </div>
+        <div>
+          <button style={{background: "none"}}>Next {">"}</button>
+        </div>
       </div>
     </div>
   );
