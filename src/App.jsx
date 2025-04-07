@@ -1,16 +1,6 @@
 import "./App.css";
 import { useState } from "react";
 
-/* Component Hierarchy
-
-  * App()
-    * FlashCardContainer()
-      * ProgressBar() 
-      * CardContent()
-      * ToolBar()
-
-*/
-
 // Contains the entire app
 export default function App() { 
   return (
