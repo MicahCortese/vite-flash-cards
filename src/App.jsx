@@ -46,7 +46,6 @@ function ProgressBar({ currentIndex, maxIndex}) {
             backgroundColor: "grey",
             textAlign: "right",
             color: "white",
-            //paddingRight: "5px",
             borderRadius: "12px",
             transition: "width 0.3s ease"
           }}
